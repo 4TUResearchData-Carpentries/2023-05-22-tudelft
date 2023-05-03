@@ -37,7 +37,7 @@ And run 'make workshop-check' *before* committing to make sure that changes are 
 For a workshop please delete the following block until the next dashed-line
 {% endcomment %}
 
-
+{% comment %}
 <div class="alert alert-danger">
 This is the workshop template. Delete these lines and use it to
 <a href="https://carpentries.github.io/workshop-template/customization/index.html">customize</a>
@@ -52,7 +52,7 @@ For workshops teaching a lesson in The Carpentries Incubator,
 remember to uncomment the `incubator_lesson_site`, `incubator_pre_survey`, and `incubator_post_survey`
 fields in `_config.yml`
 </div>
-
+{% endcomment %}
 {% comment %}
 8< ============================= until here ==================
 {% endcomment %}
@@ -381,7 +381,7 @@ of code below the Schedule `<h2>` header below with
 <h2 id="schedule">Schedule</h2>
 
 {% if site.carpentry == "swc" %}
-{% include swc/schedule.html %}
+{% include custom-schedule.html %}
 {% elsif site.carpentry == "dc" %}
 {% include dc/schedule.html %}
 {% elsif site.carpentry == "lc" %}
